@@ -1,0 +1,19 @@
+version: "2"
+
+run:
+  timeout: 5m
+  build-tags:
+    - "!cgo"
+
+linters:
+  enable:
+    - errcheck
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+
+issues:
+  exclude-rules:
+    - path: vendor/
+      text: ".*"
