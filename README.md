@@ -86,6 +86,23 @@ through cgo — no sidecar, no network hops, no metric pipeline to configure.
 - **AAIF project alignment:** [MCP](https://modelcontextprotocol.io/)
 - **Related:** [keda-gpu-scaler](https://github.com/pmady/keda-gpu-scaler) (GPU autoscaling for Kubernetes)
 
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md) for the 12-month public roadmap.
+
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved.
+
+## Governance
+
+This project follows [Linux Foundation Minimum Viable Governance](GOVERNANCE.md).
+
+## Documentation
+
+- [ROADMAP.md](ROADMAP.md) — public roadmap
+- [GOVERNANCE.md](GOVERNANCE.md) — decision-making process
+- [DEPENDENCIES.md](DEPENDENCIES.md) — external dependencies and licenses
+- [SECURITY.md](SECURITY.md) — vulnerability reporting
+- [AGENTS.md](AGENTS.md) — instructions for AI agents working on this repo
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — community standards
