@@ -1,0 +1,9 @@
+/gpu-mcp-server
+*.exe
+*.test
+*.out
+coverage.txt
+vendor/
+.idea/
+.vscode/
+.DS_Store
