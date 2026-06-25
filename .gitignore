@@ -7,4 +7,4 @@ vendor/
 .idea/
 .vscode/
 .DS_Store
-promotion/
+promotion/*

@@ -8,8 +8,10 @@ WORKDIR /src
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
-RUN CGO_ENABLED=1 go build -o /gpu-mcp-server ./cmd/gpu-mcp-server
+ARG VERSION=dev
+RUN CGO_ENABLED=1 go build -ldflags "-X main.version=${VERSION}" -o /gpu-mcp-server ./cmd/gpu-mcp-server
 
 FROM nvidia/cuda:12.8.0-base-ubuntu24.04
+LABEL io.modelcontextprotocol.server.name="io.github.pmady/gpu-mcp-server"
 COPY --from=builder /gpu-mcp-server /usr/local/bin/gpu-mcp-server
 ENTRYPOINT ["gpu-mcp-server"]
