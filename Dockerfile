@@ -1,7 +1,7 @@
 FROM nvidia/cuda:12.8.0-base-ubuntu24.04 AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    golang-go ca-certificates git && \
+    golang-go ca-certificates git build-essential && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /src
