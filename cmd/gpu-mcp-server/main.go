@@ -45,7 +45,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("nvml: %v", err)
 	}
-	defer collector.Close()
+	defer func() { _ = collector.Close() }()
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer stop()
